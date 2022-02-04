@@ -1,0 +1,95 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Login</ion-card-subtitle>
+
+    </ion-card-header>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+  </ion-card>
+  <ion-button color="dark" href="./welcome">Login</ion-button>
+  <ion-button color="light" href="./register">Register</ion-button>
+  
+
+
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicForm" novalidate>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted ">
+      Name is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted">
+      Min 3 chars long.
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted">
+      Email is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted">
+      Enter valid email.
+    </span>
+    
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted">
+      password is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted ">
+      Enter valid password.
+    </span>
+
+    <!-- <ion-item lines="full">
+      <ion-label position="floating">DOB</ion-label>
+      <ion-datetime (ionChange)="fetchDate($event)" formControlName="dob" [value]="defaultDate"></ion-datetime>
+    </ion-item> -->
+<!-- 
+    <ion-item lines="full">
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input maxlength="10" formControlName="phone" type="text" required></ion-input>
+    </ion-item> -->
+    <!-- <span class="error ion-padding" *ngIf="submitted && errorCtr.phone.error?.required">
+      Phone number is required.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.phone.error?.pattern">
+      Number values allowed.
+    </span> -->
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="dark" expand="block" (click)="onSubmit()">login</ion-button>
+        <ion-button type="submit" color="dark" expand="block" routerLink="/register">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

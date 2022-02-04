@@ -1,0 +1,33 @@
+[
+  {
+    "id": "1",
+    "name": "Singham",
+    "description": "Block buster movie"
+  },
+  {
+    "id": "2",
+    "name": "Bahubali",
+    "description": "Block buster movie"
+  },
+  {
+    "id": "3",
+    "name": "Ganga Kinare",
+    "description": "Block buster movie"
+  },
+  {
+    "id": "4",
+    "name": "Murder",
+    "description": "Block buster movie"
+  },
+  {
+    "id": "5",
+    "name": "Hate Story 1",
+    "description": "Block buster movie"
+  },
+  {
+    "id": "6",
+    "name": "Nadiya Ke Paar",
+    "description": "Block buster movie"
+  }
+  
+]
